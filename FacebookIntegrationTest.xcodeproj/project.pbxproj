@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,10 @@
 		18C4DB622610115800C1DD29 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18C4DB602610115800C1DD29 /* LaunchScreen.storyboard */; };
 		18C4DB6D2610115900C1DD29 /* FacebookIntegrationTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C4DB6C2610115900C1DD29 /* FacebookIntegrationTestTests.swift */; };
 		18C4DB782610115900C1DD29 /* FacebookIntegrationTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C4DB772610115900C1DD29 /* FacebookIntegrationTestUITests.swift */; };
+		18C4DB8A2610148100C1DD29 /* FacebookShare in Frameworks */ = {isa = PBXBuildFile; productRef = 18C4DB892610148100C1DD29 /* FacebookShare */; };
+		18C4DB8C2610148100C1DD29 /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = 18C4DB8B2610148100C1DD29 /* FacebookCore */; };
+		18C4DB8E2610148100C1DD29 /* FacebookGamingServices in Frameworks */ = {isa = PBXBuildFile; productRef = 18C4DB8D2610148100C1DD29 /* FacebookGamingServices */; };
+		18C4DB902610148100C1DD29 /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 18C4DB8F2610148100C1DD29 /* FacebookLogin */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +60,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18C4DB902610148100C1DD29 /* FacebookLogin in Frameworks */,
+				18C4DB8E2610148100C1DD29 /* FacebookGamingServices in Frameworks */,
+				18C4DB8A2610148100C1DD29 /* FacebookShare in Frameworks */,
+				18C4DB8C2610148100C1DD29 /* FacebookCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,6 +152,12 @@
 			dependencies = (
 			);
 			name = FacebookIntegrationTest;
+			packageProductDependencies = (
+				18C4DB892610148100C1DD29 /* FacebookShare */,
+				18C4DB8B2610148100C1DD29 /* FacebookCore */,
+				18C4DB8D2610148100C1DD29 /* FacebookGamingServices */,
+				18C4DB8F2610148100C1DD29 /* FacebookLogin */,
+			);
 			productName = FacebookIntegrationTest;
 			productReference = 18C4DB522610115400C1DD29 /* FacebookIntegrationTest.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +229,9 @@
 				Base,
 			);
 			mainGroup = 18C4DB492610115400C1DD29;
+			packageReferences = (
+				18C4DB882610148100C1DD29 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
+			);
 			productRefGroup = 18C4DB532610115400C1DD29 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -593,6 +610,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		18C4DB882610148100C1DD29 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/facebook/facebook-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		18C4DB892610148100C1DD29 /* FacebookShare */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18C4DB882610148100C1DD29 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookShare;
+		};
+		18C4DB8B2610148100C1DD29 /* FacebookCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18C4DB882610148100C1DD29 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookCore;
+		};
+		18C4DB8D2610148100C1DD29 /* FacebookGamingServices */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18C4DB882610148100C1DD29 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookGamingServices;
+		};
+		18C4DB8F2610148100C1DD29 /* FacebookLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18C4DB882610148100C1DD29 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookLogin;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 18C4DB4A2610115400C1DD29 /* Project object */;
 }
